@@ -27,6 +27,7 @@ url: "https://bbijaya.github.io"
 
 github:
   username: github_username # change to your GitHub username
+  pages: false
 
 twitter:
   username: twitter_username # change to your Twitter username
