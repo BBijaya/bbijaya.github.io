@@ -26,11 +26,11 @@ description: >- # used by seo meta and the atom feed
 url: "https://bbijaya.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: BBijaya # change to your GitHub username
   pages: false
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: monobijaya # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -39,11 +39,11 @@ social:
   email: example@domain.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/monobijaya # change to your Twitter homepage
+    - https://github.com/bbijaya # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    - https://www.linkedin.com/in/budhathokibijaya
 
 # Site Verification Settings
 webmaster_verifications:
