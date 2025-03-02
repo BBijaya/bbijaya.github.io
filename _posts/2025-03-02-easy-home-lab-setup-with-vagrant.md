@@ -1,6 +1,6 @@
 ---
 title: Easy Home Lab Setup with Vagrant
-date: 2023-10-20 00:00:00 +0100
+date: 2025-03-02
 categories: [homelab]
 tags: [vagrant] # TAG names should always be lowercase
 image: /assets/img/home_lab_setup_with_vagrant/vagrant-logo-1.png
