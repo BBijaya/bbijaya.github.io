@@ -37,6 +37,7 @@ to reach out to discuss how i can help strengthen your secuirity.
 
 ## Get in Touch
 🔗 LinkedIn: [linkedin.com/in/budhathokibijaya](https://www.linkedin.com/in/budhathokibijaya/){:target="_blank" rel="noopener noreferrer"}   
+🐦 Twitter: [x.com/monobijaya](https://x.com/monobijaya)    
 🌍 Blog: [bijayabudhathoki.com](https://bijayabudhathoki.com/){:target="_blank" rel="noopener noreferrer"} 
 
 Feel free to reach out if you’d like to chat about cybersecurity, cloud security, or just have a friendly discussion! 😊
