@@ -1,8 +1,8 @@
 ---
 title: Deep Dive into the Dark Web – Beyond the Myths
 date: 2025-03-06
-categories: [dark web]
-tags: [vagrant] # TAG names should always be lowercase
+categories: [Dark Web]
+tags: [Tor, Anonymity, Dark Web] # TAG names should always be lowercase
 image: assets/img/intro_to_dark_web/dark_web.webp
 ---
 
