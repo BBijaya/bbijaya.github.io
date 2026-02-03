@@ -1,0 +1,40 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "npm run export && gh-pages -d out",
+    "generate-pdf": "next build && node scripts/generate-pdf.cjs"
+  },
+  "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.1.6",
+    "framer-motion": "^12.29.2",
+    "fuse.js": "^7.1.0",
+    "gray-matter": "^4.0.3",
+    "next": "^15.5.11",
+    "next-mdx-remote": "^5.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-intersection-observer": "^10.0.2",
+    "rehype-highlight": "^7.0.1",
+    "remark-gfm": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.2",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^15.1.6",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.3.0",
+    "puppeteer": "^24.36.1",
+    "typescript": "^5.7.3"
+  }
+}

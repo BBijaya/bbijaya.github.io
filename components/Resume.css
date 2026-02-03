@@ -1,0 +1,368 @@
+.resume-page {
+  min-height: auto;
+  padding: var(--space-lg);
+}
+
+.resume-container {
+  max-width: var(--container-medium);
+  margin: 0 auto;
+}
+
+.resume-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: var(--space-lg);
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.resume-content {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  line-height: 1.6;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Header */
+.resume-header {
+  text-align: center;
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.resume-header h1 {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary);
+}
+
+.resume-title {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-sm);
+}
+
+.resume-contact {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+
+.separator {
+  color: var(--text-muted);
+}
+
+/* Sections */
+.resume-section {
+  margin-bottom: var(--space-lg);
+}
+
+.resume-section h2 {
+  font-size: clamp(1.25rem, 3vw, 1.4rem);
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.resume-section p {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xs);
+}
+
+/* Experience */
+.experience-item {
+  margin-bottom: var(--space-lg);
+}
+
+.experience-item:last-child {
+  margin-bottom: 0;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-xs);
+  gap: var(--space-sm);
+}
+
+.experience-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.company {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.experience-item ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.experience-item li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.skill-category h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.skill-category p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Certifications */
+.certifications-list {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.cert-item h4 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.cert-item p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* Education */
+.education-item {
+  margin-bottom: var(--space-sm);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.education-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.institution {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Print Styles */
+@media print {
+  /* Hide navigation when printing */
+  nav,
+  .navigation,
+  .mobile-menu,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+
+  .resume-page {
+    padding: 0;
+  }
+
+  .resume-container {
+    max-width: 100%;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .resume-content {
+    background: white;
+    border: none;
+    border-radius: 0;
+    padding: 0.5in 0.75in;
+    box-shadow: none;
+  }
+
+  .resume-header {
+    border-bottom: 2px solid #333;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .resume-header h1 {
+    color: #000;
+    font-size: 28pt;
+  }
+
+  .resume-title {
+    color: #333;
+    font-size: 12pt;
+  }
+
+  .resume-contact {
+    color: #666;
+    font-size: 10pt;
+  }
+
+  .resume-section {
+    page-break-inside: avoid;
+    margin-bottom: 1.5rem;
+  }
+
+  .resume-section h2 {
+    color: #000;
+    font-size: 14pt;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .resume-section p,
+  .experience-item li {
+    color: #333;
+    font-size: 10pt;
+    line-height: 1.5;
+  }
+
+  .experience-item {
+    page-break-inside: avoid;
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-header h3 {
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .company,
+  .date {
+    color: #666;
+    font-size: 10pt;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .skill-category h4 {
+    color: #000;
+    font-size: 10pt;
+  }
+
+  .skill-category p {
+    color: #333;
+    font-size: 9pt;
+  }
+
+  .cert-item h4 {
+    color: #000;
+    font-size: 10pt;
+  }
+
+  .cert-item p {
+    color: #666;
+    font-size: 9pt;
+  }
+
+  .education-header h3 {
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .institution {
+    color: #666;
+    font-size: 10pt;
+  }
+
+  /* Ensure proper page breaks */
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  ul {
+    page-break-inside: avoid;
+  }
+
+  /* A4 paper size */
+  @page {
+    size: A4;
+    margin: 0.5in 0.75in;
+  }
+
+  body {
+    background: white;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .resume-content {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .resume-header h1 {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+  }
+
+  .resume-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .experience-header,
+  .education-header {
+    flex-direction: column;
+  }
+
+  .date {
+    margin-top: 0.25rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
