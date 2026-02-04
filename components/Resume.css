@@ -193,11 +193,13 @@
 
 /* Print Styles */
 @media print {
-  /* Hide navigation when printing */
+  /* Hide navigation and footer when printing */
   nav,
   .navigation,
   .mobile-menu,
-  .mobile-menu-overlay {
+  .mobile-menu-overlay,
+  footer,
+  .footer {
     display: none !important;
   }
 
@@ -223,8 +225,8 @@
 
   .resume-header {
     border-bottom: 2px solid #333;
-    padding-bottom: 1rem;
-    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1rem;
   }
 
   .resume-header h1 {
@@ -243,16 +245,22 @@
   }
 
   .resume-section {
+    margin-bottom: 1rem;
+  }
+
+  /* Only avoid page breaks for experience items, not entire sections */
+  .experience-item,
+  .education-item,
+  .cert-item {
     page-break-inside: avoid;
-    margin-bottom: 1.5rem;
   }
 
   .resume-section h2 {
     color: #000;
     font-size: 14pt;
     border-bottom: 1px solid #333;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.75rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 
   .resume-section p,
@@ -263,8 +271,7 @@
   }
 
   .experience-item {
-    page-break-inside: avoid;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
   }
 
   .experience-header h3 {
