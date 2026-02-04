@@ -8,11 +8,23 @@ function startServer(port) {
   const distPath = path.join(__dirname, '../out');
 
   const server = http.createServer((req, res) => {
-    let filePath = path.join(distPath, req.url === '/' ? 'index.html' : req.url);
+    // Parse URL to get pathname without query string
+    const urlPath = req.url.split('?')[0];
+    let filePath = path.join(distPath, urlPath === '/' ? 'index.html' : urlPath);
 
-    // Handle client-side routing - serve index.html for routes
-    if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
-      filePath = path.join(distPath, 'index.html');
+    // Handle Next.js static export - try .html extension for routes
+    if (!fs.existsSync(filePath)) {
+      // File doesn't exist - try adding .html extension (Next.js static export format)
+      const htmlPath = filePath + '.html';
+      if (fs.existsSync(htmlPath)) {
+        filePath = htmlPath;
+      }
+    } else if (fs.statSync(filePath).isDirectory()) {
+      // Path is a directory - try index.html inside it
+      const indexPath = path.join(filePath, 'index.html');
+      if (fs.existsSync(indexPath)) {
+        filePath = indexPath;
+      }
     }
 
     const extname = path.extname(filePath);
