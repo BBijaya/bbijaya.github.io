@@ -1234,10 +1234,9 @@ Individual Pages: 1-3 kB each
 ### Current Issues
 
 1. **Contact Form**: No backend, form doesn't submit
-2. **Resume PDF**: Not auto-generated, manually created
-3. **Search**: Client-side only, no fuzzy matching
-4. **No Comments**: Blog has no comment system
-5. **No Analytics**: No view tracking
+2. **Search**: Client-side only, no fuzzy matching
+3. **No Comments**: Blog has no comment system
+4. **No Analytics**: No view tracking
 
 ### Static Export Limitations
 
@@ -1418,6 +1417,18 @@ npm run dev
 
 ## Change Log
 
+### February 4, 2026 - PDF Generation Fix
+
+**Resume PDF Auto-Generation:**
+- Fixed static file server in `scripts/generate-pdf.cjs` to properly handle Next.js static export URLs
+- Server now correctly resolves `/resume` to `/out/resume.html` instead of falling back to index.html
+- Updated print styles in `components/Resume.css`:
+  - Added footer to hidden elements in print mode
+  - Reduced spacing between sections for compact PDF layout
+  - Fixed page-break behavior to avoid large gaps
+
+---
+
 ### February 3, 2026 - Major Content & Architecture Updates
 
 **Container Width Standardization:**
@@ -1440,6 +1451,6 @@ npm run dev
 
 ---
 
-**Last Updated**: February 3, 2026
-**Document Version**: 1.1
-**Project Status**: Core features complete, content updated with real data, ready for deployment
+**Last Updated**: February 4, 2026
+**Document Version**: 1.2
+**Project Status**: Core features complete, PDF generation working, ready for deployment
