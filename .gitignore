@@ -37,3 +37,8 @@ Thumbs.db
 
 # Debug
 *.tsbuildinfo
+
+# Internal documentation (not for public repo)
+claude.md
+docs/
+resume_pdf_setup.md
