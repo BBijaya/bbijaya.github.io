@@ -883,10 +883,10 @@ npm run start      # Preview production build locally
 2. Push `/out` directory to `gh-pages` branch
 3. Configure repository settings to serve from `gh-pages`
 
-**GitHub Actions (TODO - Task #6):**
-- Auto-build on push to main
-- Deploy to gh-pages branch
-- Generate PDF resume during build
+**GitHub Actions (Configured):**
+- Auto-build on push to main via `deploy.yml`
+- Deploy to GitHub Pages using `actions/deploy-pages`
+- PDF resume generated during build (before deployment)
 
 ---
 
@@ -1322,9 +1322,9 @@ npm run dev
 - [ ] Archive Page (posts organized by date)
 
 ### Phase 2 - Deployment
-- [ ] GitHub Actions CI/CD
-- [ ] Auto-generate resume PDF
-- [ ] Deploy to GitHub Pages
+- [x] GitHub Actions CI/CD
+- [x] Auto-generate resume PDF
+- [x] Deploy to GitHub Pages
 - [ ] Custom domain setup
 
 ### Phase 3 - Engagement
@@ -1426,6 +1426,10 @@ npm run dev
   - Added footer to hidden elements in print mode
   - Reduced spacing between sections for compact PDF layout
   - Fixed page-break behavior to avoid large gaps
+
+**Workflow Cleanup:**
+- Removed `generate-resume-pdf.yml` workflow (was causing local/remote divergence by committing PDF back to repo)
+- PDF generation now handled solely by `deploy.yml` at deploy time
 
 ---
 
