@@ -1,3 +1,4 @@
+// Root layout for the application
 import './globals.css'
 import ClientLayout from '../components/ClientLayout'
 
