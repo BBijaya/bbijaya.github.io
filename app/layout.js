@@ -14,6 +14,14 @@ export const metadata = {
     description: 'Building secure, resilient infrastructure. Specializing in cloud security, Kubernetes hardening, and site reliability engineering.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://bijayabudhathoki.com',
+    siteName: 'Bijaya Budhathoki',
+  },
+  twitter: {
+    card: 'summary',
+    site: '@monobijaya',
+    title: 'Bijaya Budhathoki | Site Reliability Engineer & Security Engineer',
+    description: 'Building secure, resilient infrastructure. Specializing in cloud security, Kubernetes hardening, and site reliability engineering.',
   },
   robots: {
     index: true,

@@ -66,7 +66,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`navigation ${scrolled ? 'scrolled' : ''}`}>
+    <nav className={`navigation ${scrolled ? 'scrolled' : ''}`} aria-label="Main navigation">
       <div className="nav-container">
         <Link href="/" className="nav-logo">
           <span className="logo-text">BB</span>

@@ -75,7 +75,9 @@ const BlogList = ({ posts, currentPage, totalPages }) => {
           transition={{ duration: 0.4 }}
         >
           <div className="search-box">
+            <label htmlFor="blog-search" className="sr-only">Search posts</label>
             <input
+              id="blog-search"
               type="text"
               placeholder="Search posts..."
               value={searchQuery}
