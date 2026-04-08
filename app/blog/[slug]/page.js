@@ -6,6 +6,7 @@ import rehypeHighlight from 'rehype-highlight'
 import remarkGfm from 'remark-gfm'
 import CodeBlock from '../../../components/CodeBlock'
 import ReadingProgress from '../../../components/ReadingProgress'
+import JsonLd from '../../../components/JsonLd'
 import './blogPost.css'
 import 'highlight.js/styles/atom-one-dark.css'
 
@@ -89,8 +90,24 @@ export default async function BlogPostPage({ params }) {
     })
   }
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    keywords: post.tags?.join(', '),
+    datePublished: post.date,
+    url: `https://bijayabudhathoki.com/blog/${post.slug}`,
+    author: {
+      '@type': 'Person',
+      name: 'Bijaya Budhathoki',
+      url: 'https://bijayabudhathoki.com',
+    },
+  }
+
   return (
     <div style={{ paddingTop: '80px' }}>
+      <JsonLd data={articleSchema} />
       <ReadingProgress />
       <article className="blog-post section">
         <div className="blog-post-container">
