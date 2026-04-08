@@ -43,10 +43,18 @@ const ParticleBackground = () => {
     };
 
     resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+
+    let resizeTimer;
+    const handleResize = () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(resizeCanvas, 150);
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
+      clearTimeout(resizeTimer);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

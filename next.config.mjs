@@ -12,9 +12,6 @@ const nextConfig = {
   // basePath: '/repo-name',
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   compress: true,
   poweredByHeader: false,
   trailingSlash: false,
