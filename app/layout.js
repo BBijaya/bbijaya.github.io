@@ -1,6 +1,20 @@
 // Root layout for the application
 import './globals.css'
 import ClientLayout from '../components/ClientLayout'
+import JsonLd from '../components/JsonLd'
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Bijaya Budhathoki',
+  jobTitle: 'Site Reliability Engineer & Security Engineer',
+  url: 'https://bijayabudhathoki.com',
+  sameAs: [
+    'https://github.com/BBijaya',
+    'https://linkedin.com/in/budhathokibijaya',
+    'https://x.com/monobijaya',
+  ],
+}
 
 export const metadata = {
   title: {
@@ -41,6 +55,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <JsonLd data={personSchema} />
       </head>
       <body suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
