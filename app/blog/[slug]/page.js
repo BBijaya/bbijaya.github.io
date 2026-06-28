@@ -27,6 +27,11 @@ export async function generateMetadata({ params }) {
     }
   }
 
+  const ogImage =
+    post.published !== false
+      ? `/og/blog-${resolvedParams.slug}.png`
+      : `/og/default.png`
+
   return {
     title: post.title,
     description: post.excerpt,
@@ -38,13 +43,13 @@ export async function generateMetadata({ params }) {
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
-      images: [`/og/blog-${resolvedParams.slug}.png`],
+      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      images: [`/og/blog-${resolvedParams.slug}.png`],
+      images: [ogImage],
     },
   }
 }
