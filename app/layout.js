@@ -17,6 +17,7 @@ const personSchema = {
 }
 
 export const metadata = {
+  metadataBase: new URL('https://bijayabudhathoki.com'),
   title: {
     default: 'Bijaya Budhathoki | Site Reliability Engineer & Security Engineer',
     template: '%s | Bijaya Budhathoki',
@@ -30,12 +31,14 @@ export const metadata = {
     locale: 'en_US',
     url: 'https://bijayabudhathoki.com',
     siteName: 'Bijaya Budhathoki',
+    images: ['/og/default.png'],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     site: '@monobijaya',
     title: 'Bijaya Budhathoki | Site Reliability Engineer & Security Engineer',
     description: 'Building secure, resilient infrastructure. Specializing in cloud security, Kubernetes hardening, and site reliability engineering.',
+    images: ['/og/default.png'],
   },
   robots: {
     index: true,
@@ -56,6 +59,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <JsonLd data={personSchema} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Bijaya Budhathoki — Blog"
+          href="/feed.xml"
+        />
       </head>
       <body suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
