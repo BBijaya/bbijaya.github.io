@@ -38,6 +38,13 @@ export async function generateMetadata({ params }) {
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [`/og/blog-${resolvedParams.slug}.png`],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [`/og/blog-${resolvedParams.slug}.png`],
     },
   }
 }
