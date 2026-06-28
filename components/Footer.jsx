@@ -8,6 +8,7 @@ const Footer = () => {
     { name: 'Twitter', url: 'https://x.com/monobijaya', external: true },
     { name: 'Resume', url: '/resume', external: false },
     { name: 'Privacy', url: '/privacy', external: false },
+    { name: 'RSS', url: '/feed.xml', external: true },
   ];
 
   return (

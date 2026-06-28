@@ -59,6 +59,12 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <JsonLd data={personSchema} />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Bijaya Budhathoki — Blog"
+          href="/feed.xml"
+        />
       </head>
       <body suppressHydrationWarning>
         <ClientLayout>{children}</ClientLayout>
