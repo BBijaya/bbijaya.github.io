@@ -9,7 +9,8 @@
     "lint": "next lint",
     "export": "next build && next export",
     "deploy": "npm run export && gh-pages -d out",
-    "generate-pdf": "next build && node scripts/generate-pdf.cjs"
+    "generate-pdf": "next build && node scripts/generate-pdf.cjs",
+    "generate-og": "node scripts/generate-og.cjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
